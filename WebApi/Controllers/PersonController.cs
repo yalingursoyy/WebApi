@@ -42,7 +42,12 @@ namespace WebApi.Controllers
             await unitOfWork.Person.Update(id,entity);
             return NoContent();
         }
+        [HttpDelete]
+        public void Delete(Person entity)
+        {
+            unitOfWork.Person.Delete(entity);
+        }
 
-         
+
     }
 }
